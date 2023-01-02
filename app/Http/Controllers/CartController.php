@@ -85,7 +85,7 @@ class CartController extends Controller
         // Reviso si el stock es mayor a 0
         if ($stock >= 0) {
             Cart::update($request->id, $request->qty);
-            $msg = __('Updated quantity');
+            $msg = __('Cantidad Actualizado');
             $type_msg = 'success';
         } else {
             $msg = __('You can no longer add more of this product to the cart');
@@ -132,8 +132,8 @@ class CartController extends Controller
             return redirect()->back()->with($notification);
         }
 
-        $msg = __('You can no longer add more of this product to the cart');
-        $msgType = 'warning';
+        $msg = __('Carrito actualizado!');
+        $msgType = 'success';
 
         $notification = array(
             'message' => $msg,

@@ -2,7 +2,7 @@
 @section('content')
     <!--Start Main Image -->
     @include('layouts.parts.mainimage', [
-        'title' => 'Perfil de Usuario',
+        'title' => 'Hola, ' . Auth::user()->name,
         'category' => 'Inicio',
         'url' => '/',
     ])
@@ -12,20 +12,10 @@
             {{-- Start Sidebar --}}
             @include('account.layouts.sidebar')
             {{-- End Sidebar --}}
-
-            <div class="flex flex-wrap">
-
-                 {{-- Start Profile Details --}}
-                 @include('profile.update-profile-information-form')
-                 {{-- End Profile Details --}}
-
-              {{-- Start Update Password --}}
-              @include('profile.update-password-form')
-               {{-- End SUpdate Password --}}
-
-            </div>
+              {{-- Start Shopping Details --}}
+              @include('account.layouts.order_details')
+               {{-- End Shopping Details --}}
 
         </div>
     </div>
 @endsection
-

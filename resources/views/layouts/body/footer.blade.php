@@ -11,7 +11,7 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4 text-slate-100">
                     <h2 class="ftco-heading-2 text-slate-100">UNEDL</h2>
-                    <p>Siguenos en nuestras redes sociales.</p>
+                    <p>Síguenos en nuestras redes sociales.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="https://twitter.com/unedlu"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="https://www.facebook.com/unedl.universidad/"><span class="icon-facebook"></span></a></li>
@@ -34,7 +34,7 @@
                     <h2 class="ftco-heading-2 text-slate-100">Ayuda</h2>
                     <div class="d-flex">
                         <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                            <li><a href="#" class="py-2 d-block">Politica de Privacidad</a></li>
+                            <li><a href="/privacy" class="py-2 d-block">Política de Privacidad</a></li>
                         </ul>
 
                     </div>

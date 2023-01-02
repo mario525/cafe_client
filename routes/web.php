@@ -22,19 +22,23 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/buscar', [App\Http\Controllers\HomeController::class, 'search'])->name('buscar');
 Route::get('/product/{product}',  [App\Http\Controllers\ProductController::class, 'index'])->name('product');
 // Rutas que requieren que el usuario este logeado
 Route::get('/categoria/{name}', [App\Http\Controllers\CategoriasController::class, 'index'])->name('categorias');
 
+Route::get('/privacy', function () {
+    return view('politica.index');
+})->name('privacy');
 
 
-
+   # Reinicio de Contra
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/reeee', function () {
         return view('dashboard');
     })->name('dashboard');
 });
@@ -42,6 +46,13 @@ Route::middleware([
 
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/user/details', function () {
+        return view('profile.show');
+    })->name('usuarios.detalles');
+    Route::post('usuario/actualizar/pass', [App\Http\Controllers\AccountController::class, 'actualizarcontra'])->name('actualizar.pass');
+    Route::post('usuario/actualizar/dato', [App\Http\Controllers\AccountController::class, 'actualizardato'])->name('actualizar.dato');
+
    # Ver hoja de categorias
     Route::resource('order', 'App\Http\Controllers\AccountController');
     # Agregar al carrito Store Data

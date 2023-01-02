@@ -5,7 +5,7 @@
     <div class="flex flex-col pl-3">
             <x-profile-sidebar name="Pedidos Pendientes" href="/orders/pending" url="order.pending" ></x-profile-sidebar>
             <x-profile-sidebar name="Historial" href="/order" url="order.index" url2="order.show" ></x-profile-sidebar>
-            <x-profile-sidebar name="Detalles de Perfil" href="/d" url="red" ></x-profile-sidebar>
+            <x-profile-sidebar name="Detalles de Perfil" href="/user/details" url="usuarios.detalles" ></x-profile-sidebar>
 
     </div>
     {{-- Logout --}}

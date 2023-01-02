@@ -38,4 +38,21 @@ class HomeController extends Controller
 
         return view('index', compact('productos_frios', 'productos_calientes'));
     }
+
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('searchme');
+
+        // Search in the title and body columns from the posts table
+        $count = Producto::query()
+            ->where('nombre', 'LIKE', "%{$search}%")
+            ->count();
+        $posts = Producto::query()
+            ->where('nombre', 'LIKE', "%{$search}%")
+            ->paginate(10);
+          $posts->appends(['searchme' => $search]);
+
+        // Return the search view with the resluts compacted
+        return view('search.index', compact('posts' , 'search', 'count'));
+    }
 }

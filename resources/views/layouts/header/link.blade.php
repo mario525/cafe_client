@@ -15,3 +15,5 @@
 <link rel="stylesheet" href="{{asset('assets/styles/flaticon.css')}}"/>
 <link rel="stylesheet" href="{{asset('assets/styles/icomoon.css')}}"/>
 <link rel="stylesheet" href="{{asset('assets/styles/style.css')}}"/>
+{{-- Toastr --}}
+<link href="{{ asset('assets/css/toastr.min.css') }}" rel="stylesheet">
